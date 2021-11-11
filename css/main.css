@@ -110,6 +110,10 @@ section.hero a {
   border: 2px solid whitesmoke;
   padding: 20px 50px;
 }
+section.hero a:hover {
+  background-color: whitesmoke;
+  color: #050505;
+}
 
 section.about .columns {
   padding: 10vw 50px;
@@ -198,6 +202,9 @@ footer .links a {
 }
 footer .links a svg path {
   fill: whitesmoke;
+}
+footer .links a:hover svg path {
+  fill: #d6d4d4;
 }
 
 small {

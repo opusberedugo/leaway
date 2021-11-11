@@ -108,6 +108,10 @@ section.hero{
    text-transform: uppercase;
    border: 2px solid whitesmoke;
    padding: 20px 50px;
+   &:hover{
+     background-color: whitesmoke;
+     color: #050505;
+   }
  }
 
 }
@@ -211,7 +215,15 @@ footer{
           fill: whitesmoke;
         }
       }
-    }
+      &:hover{
+        svg{
+          path{
+            fill: #d6d4d4;
+          }
+        }
+      } 
+    }  
+    
   }
 }
 
