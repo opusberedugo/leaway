@@ -52,6 +52,7 @@ nav .brand .menu {
   background-color: #0000;
   border: none;
   margin-right: 20px;
+  cursor: pointer;
 }
 nav .brand .menu svg path {
   fill: whitesmoke;
