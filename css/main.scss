@@ -17,6 +17,11 @@ html{
   }
 }
 
+@mixin  backgroundoverlay($url) {
+ background-image: linear-gradient(120deg, #000000cb,#000000cb), url($url); 
+ background-size: cover;
+}
+
 nav{
   background-color: #050505;
   color: whitesmoke;
@@ -50,8 +55,9 @@ nav{
       display: none;
       background-color: #0000;
       border: none;
-      margin-right: 20px;
+      // margin-right: 20px;
       cursor: pointer;
+      padding: 10px;
       svg{
         path{
           fill: whitesmoke;
@@ -154,7 +160,14 @@ section.about{
   }
 }
 
+section.lead{
+  text-align: center;
+  padding: 50px;
+  font-size: 1.5em;
+}
+
 section#services{
+  padding:50px;
   h1{
     text-align: center;
     text-transform: uppercase;
@@ -174,12 +187,13 @@ section#services{
     }
     
     .service{
-      padding: 20px 40px;
+      padding: 150px 40px;
       box-shadow: 0 24px 48px #103e381f;
       border: none;
       border-radius: 10px;
       display: flex;
       flex-direction: column;
+      color: whitesmoke;
       
       h2{
         text-align: center;
@@ -189,10 +203,17 @@ section#services{
         margin: auto 0;
       }
 
-      &:nth-of-type(2) , &:nth-of-type(3){
-        .text{
-          margin:  20px 0 auto 0;
-        }
+      &:nth-of-type(3) {
+        background-image: linear-gradient(120deg, #000000cb,#000000cb), url('../images/pexels-binyamin-mellish-106399.jpg');
+        background-size: cover;
+      }
+
+      &:nth-of-type(1) {
+        @include backgroundoverlay('../images/pexels-sourav-mishra-1309644.jpg')
+      }
+
+      &:nth-of-type(4) {
+        @include backgroundoverlay('../images/pexels-karolina-grabowska-4239037.jpg')
       }
 
     }

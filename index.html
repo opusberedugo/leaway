@@ -42,7 +42,15 @@
     <a href="./about.html">Get Started</a>
   </section>
 
-
+  <section class="lead">
+    <div class="quote-l">
+      "
+    </div>
+    <p class="lead">
+      We are an organization aimed at giving the best services
+    </p>
+    <div class="quote-r">"</div>
+  </section>
 
 
 
@@ -52,54 +60,36 @@
 
       <div class="service">
         <h2 class="title">Air Tickets</h2>
-        <div class="text">
-          Professional customer-oriented service providing hassle free travel, email capabilities for convenience and prompt booking and information. We pride ourselves in customer satisfaction. We do not only offer competitive prices to our customer; we are also able to pass on very competitive prices and a maximum opportunity for choices and flexibility. A large percentage of our bookings and services are from repeat clientele while much of our new business is from word-of-mouth recommendations.
-        </div>
       </div>
-      <!-- End of Service -->
+      <!-- End fo service -->
 
       <div class="service">
         <h2 class="title">Removal Services</h2>
-        <div class="text">
-          Leaway services are also expert in removal services in London and all over the United Kingdom, providing the cheapest, safest, and most secured domestic and commercial removals. 
-        </div>
       </div>
-      <!-- End of Service -->
+      <!-- End fo service -->
 
       <div class="service">
         <h2 class="title">Property Services</h2>
-        <div class="text">
-          Our agents travel daily to inspect the newest properties that have undergone renovation which enables us to suggest properties that match our client’s needs, and personalities.
-        </div>
       </div>
-      <!-- End of Service -->
+      <!-- End fo service -->
 
       <div class="service">
         <h2 class="title">Cleaning Services</h2>
-        <div class="text">
-          We offer professional cleaning services. This includes offices, residential homes, churches, hotels, hospitals and more... Our rates are very considerate and basic.
-        </div>
       </div>
-      <!-- End of Service -->
+      <!-- End fo service -->
 
       <div class="service">
         <h2 class="title">Cargo/Shipping Services</h2>
-        <div class="text">
-          Our goal is to offer you the best shipping options, no matter where you live as we do pickups. Every day, we deliver to hundreds of customers in Africa, e.g Nigeria, Ghana etc, ensuring that we always provide the very highest levels of responsiveness to you.
-        </div>
       </div>
-      <!-- End of Service -->
+      <!-- End fo service -->
 
       <div class="service">
         <h2 class="title">Vehicle Recovery Service</h2>
-        <div class="text">
-          Our aim to be at address within 45 mins of your call each time wherever possible. Our prices are negotiable and considerate.
-        </div>
       </div>
-      <!-- End of Service -->
+      <!-- End fo service -->
     
     </div>
-    <!-- Service Grid Container -->
+    <!-- End of Services Div -->
   </section>
   <!-- End of Services Sections -->
 
@@ -143,9 +133,16 @@
 
     
 
+
     menuButton.addEventListener('click',(e)=>{
-      $('.options').fadeToggle(1000)
+      $('.options').slideToggle(()=>{
+        menuButton.classList.toggle('active')
+      })
     })
+
+    $('options a').click(()=>{
+      $('.options').slideUp();
+    });
   </script>
 </body>
 </html>
