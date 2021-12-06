@@ -1,33 +1,42 @@
-let tabs = document.querySelectorAll("div.tabs ul li");
-let content = document.querySelectorAll("section.service")
+var tabs = document.querySelectorAll("div.tabs ul li");
+var content = document.querySelectorAll("section.service");
+var ids = ['air-tickets','removal','property','cleaning','cargo-shipping','vehicle-recovery'];
 
-const removeActiveTab = ()=>{
-  tabs.forEach((v)=>{
-    v.classList.remove("active");
-  })
+function removeActiveTab() {
+  tabs.forEach(function (v) {
+      v.classList.remove("active");
+    });
 }
 
-const removeActiveService = ()=> {
-  content.forEach((v)=>{
-    $(v).fadeOut('fast');
-  })
-}
-
-tabs.forEach((v,i)=>{
-  v.addEventListener("click", (e)=>{
-    if (v.classList.contains("active")) {
-      
+function urlFunction() {
+  ids.forEach(function (v, i) {
+    if (window.location.href.endsWith("#"+v)) {
+      tabs[i].click();
     }
-    else{
-      removeActiveTab();
-      v.classList.add("active")
-      removeActiveService();
-      $(content[i]).fadeIn('fast')  
-    }
-
   });
-});
+}
 
-document.addEventListener("readystatechange", (e)=>{
-  document.readyState
-})
+function removeActiveService() {
+  content.forEach(function (v) {
+    $(v).fadeOut('fast');
+  });
+}
+
+
+tabs.forEach(function (v, i) {
+    v.addEventListener("click", function () {
+      if (!v.classList.contains("active")) {
+        removeActiveTab();
+        v.classList.add("active");
+        removeActiveService();
+        $(content[i]).fadeIn('fast');
+      }
+
+    });
+  });
+
+document.addEventListener("readystatechange", function () {
+  if (document.readyState === "complete") {
+    urlFunction();
+  }
+});
