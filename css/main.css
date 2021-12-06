@@ -95,7 +95,7 @@ nav .options a:hover {
 
 section.hero {
   background-image: linear-gradient(120deg, #000000cb, #000000cb), url("../images/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg");
-  padding: 200px 20px;
+  padding: 250px 20px;
   text-align: center;
   color: whitesmoke;
 }
@@ -237,7 +237,8 @@ section#services .services .service:nth-of-type(2) {
 section.contact h2 {
   text-align: center;
   text-transform: uppercase;
-  padding: 20px;
+  padding: 50px;
+  font-size: 2em;
 }
 section.contact form {
   margin: 0 5%;
@@ -297,6 +298,7 @@ section.subscribe {
 section.subscribe h2 {
   text-align: center;
   text-transform: uppercase;
+  font-size: 2em;
 }
 section.subscribe form {
   padding: 100px 50px;

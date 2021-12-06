@@ -1,0 +1,77 @@
+section.hero{
+  background-image: linear-gradient(120deg, #000000cb,#000000cb), url("../images/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg");
+  background-size: cover;
+  // padding:250px 20px;
+}
+
+.tabs{
+  align-items: stretch;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+  ul{
+    align-items: center;
+    // border-bottom-color: #dbdbdb;
+    // border-bottom-style: solid;
+    // border-bottom-width: 1px;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    list-style-type: none;
+
+    
+    li{
+      cursor: pointer;
+      padding:20px;
+      border: 1px solid #dbdbdb;
+
+      &:hover{
+        background-color: #111010;
+        color: whitesmoke;
+        border: #111010 1px solid;
+        transition-duration: 0.3s;
+      }
+
+      &.active{
+        background-color:black ;
+        color: whitesmoke;
+        border: 1px solid black;
+      }
+    }
+  }
+}
+
+.service{
+  display: none;
+  padding: 50px 2.5vw;
+  h2{
+    text-transform: uppercase;
+  }
+  ul{
+    list-style-type: none;
+    font-size: 1.2rem;
+    li{
+      padding: 10px 0;
+    }
+  }
+  
+  p{
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+
+  &#air-tickets{
+    display: block;
+  }
+
+  
+}
+
+
